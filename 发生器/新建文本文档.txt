@@ -1,0 +1,28 @@
+value = app.Chanel1Button.Value;
+            if ~value
+                app.Chanel1Lamp.Color=[1 0 0];
+            else
+                app.Chanel1Lamp.Color=[0 1 0];
+                % 电压
+                amp = app.VolEditField1.Value;
+                switch amp
+                    case "mV"
+                        amp = amp*10^(-3);
+                    case "uV"
+                        amp = amp*10^(-6);
+                end
+                % 频率
+                freq = app.fre1.Value;
+                switch freq
+                    case "Hz"
+                        freq = freq*10^(-3);
+                    case "MHz"
+                        freq = freq*10^(6);
+                end
+                if app.typeDropDown.Value == "正弦波"                   
+                    app.dg4000.generateSin(1,freq,amp,app.offset.Value,app.para.Value)
+                end
+            end
+相位（正弦波）
+占空比（方波）
+对称性（锯齿波）
