@@ -1,5 +1,5 @@
 # rigol-oscilloscope-and-generator
- matlab app to control rigol oscilloscope and generator
+ matlab app to control rigol oscilloscope and generator（DLUT 2022）
 ## 一 简介
 本程序是基于SCPI指令的matlab APP，可用于rigol公司生产的的示波器&信号发生器的远程控制。
 
